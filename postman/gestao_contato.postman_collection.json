@@ -1,0 +1,171 @@
+{
+	"info": {
+		"name": "gestao_contato",
+		"_postman_id": "cc49c4b0-69df-0227-a562-048ae9dfd48c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET no root da API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1"
+					]
+				},
+				"description": "Faz o request GET no root da API onde retorna a API contato com seu endpoint e seu schema"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create contato",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Rodrigo Aguiar Biassusi\",\n    \"obs\": \"Teste create de contato\",\n    \"tipo\": \"email\",\n    \"valor\": \"21995241837\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/contato/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contato",
+						""
+					]
+				},
+				"description": "Faz o POST para criação de um contato"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update contato",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Rodrigo Aguiar Biassusi\",\n    \"obs\": \"Teste de update de contato\",\n    \"tipo\": \"celular\",\n    \"valor\": \"21995241837\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/contato/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contato",
+						"1",
+						""
+					]
+				},
+				"description": "Faz um PUT alterando as informções do contato de id 1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET contato list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/contato/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contato",
+						""
+					]
+				},
+				"description": "Faz um get no endpoint de contato retornando a lista de contatos cadastrados"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Contato",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/contato/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contato",
+						"1",
+						""
+					]
+				},
+				"description": "Delete o contato de id 1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET schema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/contato/schema/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contato",
+						"schema",
+						""
+					]
+				},
+				"description": "Faz um GET no schema de contato"
+			},
+			"response": []
+		}
+	]
+}
